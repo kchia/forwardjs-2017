@@ -28,3 +28,11 @@ Findings:
 - Visual metrics will perform better than non-visual metrics
 
 The Speed Index metric is an excellent one to watch as you try to measure the perceived performance of your page, as it will tell you how quickly the “above the fold” content is populated for your users. It’s good to focus on how quickly your users begin to see and be able to interact with content rather than focus how long it takes for the browser to completely finish loading your page’s content (which includes any asynchronous content that is fetched and executed after the document is visually complete). 
+
+Time to interactivity is a term for the time between when users navigate to a page and when they can complete an action like clicking a link, performing a search, or playing a video. There are a number of ways you can improve the speed at which content begins to load and become interactive for your users by optimizing the critical rendering path:
+
+Asynchronously load content
+Prioritize requests for “above the fold” content
+Follow best practices for loading CSS and JavaScript (more in “CSS and JavaScript Loading”)
+Cache assets for returning users (more in “Caching Assets”)
+Ensure that any primary actions for the page are available to the user as quickly as possible
