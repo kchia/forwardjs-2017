@@ -1,0 +1,31 @@
+Practical Service Workers
+- A service worker is an event based proxy; intermediary between webpage and "internet".
+
+Web Workers
+- A type of service worker
+- Why? Because of the way JavaScript works - the event loop/UI thread
+- Web worker does expensive computations in a separate thread so no need to block the paint process
+- It's async; it'll be done when it's done
+- HTTPS only
+- NO access to local storage
+- Event-based - install, activate, fetch, message
+  - install: this.oninstall()
+  - activate: this.onactivate()
+- APIS
+  - Fetch and Catch
+    - Fetch returns a promise; used in modern browsers, CAN BE INTERCEPTED BY SERVICE WORKERS
+  - Cache
+    - cache.put(Request, Response
+    - accessed via CacheStorage, which is async
+- Building an offline app    
+  - event.waitUntil(Promise) // keep worker alive until resolution
+  - event.respondWith(Promise)
+- Transpiling ES6 on the client
+  - Can use Babel
+- Don't cache your service worker
+- Know your developer tools
+- Know your scope: 
+
+Lifecycle and Events
+
+Examples
