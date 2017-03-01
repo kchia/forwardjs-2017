@@ -1,2 +1,21 @@
 Understanding and Measuring Perceived Performance
 http://instartlogic.github.io/p/spdperception
+
+1. Understanding performance
+- time to load
+- time until usable
+- jitter
+- responsiveness
+- smoothness
+
+2. Understanding perceived performance
+- response to input; within 100ms give user feedback, under 3 seconds
+- animation and scrolling
+- idle
+- page load
+
+3. Measurement
+
+Objective vs Subjective
+What subjective ways (e.g., loading state) to improve performance?
+Load Time v. Visually Complete
