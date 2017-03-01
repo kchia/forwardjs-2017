@@ -1,6 +1,7 @@
 Understanding and Measuring Perceived Performance
-http://instartlogic.github.io/p/spdperception
-speedperception.meteorapp.com
+- http://instartlogic.github.io/p/spdperception
+- speedperception.meteorapp.com
+- webpagetest
 
 1. Understanding performance
 - time to load
@@ -22,3 +23,8 @@ What subjective ways (e.g., loading state) to improve performance?
 Load Time v. Visually Complete
 
 http://designingforperformance.com/basics-of-page-speed/
+
+Findings:
+- Visual metrics will perform better than non-visual metrics
+
+The Speed Index metric is an excellent one to watch as you try to measure the perceived performance of your page, as it will tell you how quickly the “above the fold” content is populated for your users. It’s good to focus on how quickly your users begin to see and be able to interact with content rather than focus how long it takes for the browser to completely finish loading your page’s content (which includes any asynchronous content that is fetched and executed after the document is visually complete). 
