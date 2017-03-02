@@ -1,0 +1,46 @@
+bit.ly/universal-app-react
+bit.ly/isomorphicdevjs
+
+https://www.slideshare.net/ElyseKolkerGordon/building-universal-web-apps-with-react-72715124
+
+universal or isomorphic?
+- Write code once, run it in two environments (node & browser)
+- node outputs a string which is parsed by the browser, network requests happen on the server (routes are matched similarly), 
+
+What are universal web apps?
+- server rendered app
+- SPA
+- user goes to browser, server fetches data, take state represented by fetched data (browser uses this to rehydrate the app state 
+to match what's sent back from browser, state sharing between browser and server
+- Benefits: #1 SEO, #2 Perceived performance, #3 Maintenance and developer benefits (only write in JS, write same helper code for 
+server and browser)
+
+Why?
+
+Universal App Architecture
+- what it requires: server setup and browser setup
+  - Node/Express runs the server, most of the work is in Express middleware
+  - Webpack, so code can run in both environments, example React can't work untransformed in browsers
+    - NPM packages
+    - CSS in your browser bundle
+    - ES6
+    - code -> parser -> tranforms -> compiled code
+  - React: virtual DOM (makes it possible to write isomorphic code without lots of overhead); calculate without rerendering/repainting
+    - on server, output string rep of HTML component which is passed back to browser
+    - on server, uses same routes. 
+  - Redux
+    - helpful for large scale React applications
+    - unidirectional data flow
+  - static keyword - you need data from server
+  - On server: const serverState and const stringifiedServerState
+    - const html = renderToString
+ - browser setup - no need for data fetching; just render the react; just render the difference
+  
+Challenges and Tradeoffs
+- Competing envs: server and browser are very different environmets
+- for browser only code: if(process.env.BROWSER) {} //Webpack is great for configuring stuff like this
+- Performance is a challenge on server: renderString not very performant for complex pages; server performance
+  - strategies: only render above the fold content on the server (SEO tradeoff)
+  - use streams
+  - caching - in memory caching, CDN/Edge, Walmart Labs Server (Electrode)
+- Complexity - learn new way of thinking; have to understand how to understand all the different pieces
